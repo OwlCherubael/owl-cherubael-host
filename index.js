@@ -22,7 +22,23 @@ app.get('/form', (req, res) => {
 // Обработка формы и отображение приветствия
 app.post('/greet', (req, res) => {
     const name = req.body.name;
-    res.send(`<h1>Привет, ${name}!</h1><a href="/">Вернуться на главную страницу</a>`);
+    res.send(`
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Приветствие</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Привет, ${name}!</h1>
+            <a href="/" class="button">Вернуться на главную страницу</a>
+        </div>
+    </body>
+    </html>
+    `);
 });
 
 // Запуск сервера
