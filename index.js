@@ -4,13 +4,11 @@ const mysql = require('mysql2');
 const path = require('path');
 const app = express();
 
+// Получение URL подключения из переменных окружения
+const dbUrl = process.env.JAWSDB_URL || 'mysql://itqdzakzp3o8dnvx:ervwgfvt4yrmcygz@tyduzbv3ggpf15sx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/ofg65703uwlrn8ck';
+
 // Настройка базы данных
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
-    database: 'mydatabase'
-});
+const db = mysql.createConnection(dbUrl);
 
 // Подключение к базе данных
 db.connect(err => {
