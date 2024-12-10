@@ -1,27 +1,22 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path'); // Для работы с путями
 const app = express();
 
 // Настройка body-parser для обработки POST-запросов
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Указываем Express использовать статические файлы из папки public
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Главная страница
 app.get('/', (req, res) => {
-    res.send(`
-        <h1>Добро пожаловать на главную страницу!</h1>
-        <a href="/form">Перейти на страницу с формой</a>
-    `);
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Страница с формой
 app.get('/form', (req, res) => {
-    res.send(`
-        <h1>Введите ваше имя</h1>
-        <form action="/greet" method="POST">
-            <input type="text" name="name" placeholder="Ваше имя" required>
-            <button type="submit">Отправить</button>
-        </form>
-    `);
+    res.sendFile(path.join(__dirname, 'public', 'form.html'));
 });
 
 // Обработка формы и отображение приветствия
