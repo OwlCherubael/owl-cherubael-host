@@ -60,7 +60,7 @@ app.post('/greet', (req, res) => {
      </head>
      <body>
          <div class="errorName">
-             <h1 class="errorNameText">У вас нет истенного имени <span id="name">${name}</span>!</h1>
+             <h1 class="errorNameText">У вас нет истинного имени <span id="name">${name}</span>!</h1>
         </div>
      </body>
      </html>
