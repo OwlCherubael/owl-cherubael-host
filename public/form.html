@@ -8,11 +8,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>Введите ваше имя</h1>
-        <form action="/greet" method="POST">
+        <h1>Введите истинное имя и код</h1>
+        <form action="/greet" method="POST" novalidate>
             <input type="text" name="name" placeholder="Ваше имя" required>
-            <button type="submit">Отправить</button>
-        </form>
+            <input type="password" name="password" placeholder="Код" required>
+            <button type="submit" class="styled-button">Отправить</button>
+        </form>        
     </div>
 </body>
+
 </html>

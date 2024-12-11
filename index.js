@@ -44,6 +44,28 @@ app.get('/form', (req, res) => {
 // Обработка формы и отображение приветствия
 app.post('/greet', (req, res) => {
     const name = req.body.name;
+    const password = req.body.password; // Предположим, что пароль передается из формы
+
+    // Проверка пароля
+    const correctPassword = 'CherubaelCursedGod!'; // Замените на ваш пароль
+    if (password !== correctPassword) {
+        return res.status(403).send(`
+            <!DOCTYPE html>
+     <html lang="ru">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Ошибка</title>
+         <link rel="stylesheet" href="styles.css">
+     </head>
+     <body>
+         <div class="errorName">
+             <h1 class="errorNameText">У вас нет истенного имени <span id="name">${name}</span>!</h1>
+        </div>
+     </body>
+     </html>
+             `);
+    }
 
     // Сохранение имени в базе данных
     db.query("INSERT INTO names (name) VALUES (?)", [name], (err, results) => {

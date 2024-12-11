@@ -20,6 +20,24 @@ body {
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); /* Золотой ореол */
 }
 
+.errorName {
+    max-width: 800px;
+    margin: 5vw auto; /* Использование относительных единиц */
+    padding: 2vw; /* Использование относительных единиц */
+    background-color: #333; /* Темно-серая коробка */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border: 4px solid #ff0000; /* Золотая рамка вокруг контейнера */
+    box-shadow: 0 0 20px rgb(255, 0, 0); /* Золотой ореол */
+    
+}
+
+.errorNameText {
+    color: #9e1414;
+    
+}
+
 h1 {
     color: #ffcc00; /* Золотистый текст, как у Империума */
     text-shadow: 1px 1px 2px black;
@@ -76,6 +94,79 @@ a.button:hover {
     background-color: rgb(118, 1, 1); /* Темный красный при наведении */
 }
 
+input[type="text"], input[type="password"] {
+    width: calc(100% - 20px); /* Ширина с учётом отступов */
+    padding: 1vw; /* Отступ внутри полей ввода */
+    margin: 1vw 0; /* Отступ между полями */
+    border: 2px solid #ffcc00; /* Золотая рамка */
+    border-radius: 5px; /* Закругление углов */
+    background-color: #444; /* Темный фон для полей ввода */
+    color: #ffcc00; /* Цвет текста */
+    font-size: 2vw; /* Размер шрифта */
+    transition: background-color 0.3s; /* Плавный переход при наведении */
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    background-color: #555; /* Изменяем фон при фокусе */
+    outline: none; /* Убираем стандартную рамку */
+}
+
+input {
+    text-align: center; /* Центрируем текст внутри полей */
+    padding: 1vw; /* Добавляем немного внутреннего отступа */
+    border: 2px solid #ffcc00; /* Золотая рамка */
+    border-radius: 5px; /* Закругляем углы */
+    background-color: #444; /* Темный фон для полей ввода */
+    color: #ffcc00; /* Цвет текста */
+    font-size: 2.5vw; /* Размер шрифта */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7); /* Золотой ореол */
+    transition: border-color 0.3s; /* Плавный переход цвета рамки */
+}
+
+input:focus {
+    border-color: #f5d75d; /* Изменяем цвет рамки при фокусе */
+    outline: none; /* Убираем стандартное выделение */
+}
+
+.styled-button {
+    display: inline-block;
+    padding: 1vw 2vw; /* Использование относительных единиц */
+    background-color: #9e1414; /* Красный цвет, напоминающий имперский знак */
+    color: #f5d75d;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход цветов */
+    font-size: 2vw; /* Размер шрифта на кнопках */
+    border: 2px solid #f5d75d; /* Черная рамка вокруг кнопок */ 
+}
+
+.styled-button:hover {
+    background-color: rgb(118, 1, 1); /* Темный красный при наведении */
+}
+
+.error {
+    display: none; /* Скрыть предупреждение по умолчанию */
+}
+
+input:invalid:after {
+    content: ''; /* Убираем содержимое */
+    display: none; /* Скрываем сообщение */
+}
+
+input:invalid:after {
+    content: ''; /* Убираем содержимое */
+    display: none; /* Скрываем сообщение */
+}
+
+.error-message {
+    display: none; /* Скрыть сообщения об ошибке по умолчанию */
+}
+
+
+input[title]:hover::after {
+    display: none;
+}
+
 /* Медиа-запросы для адаптивной настройки */
 @media (max-width: 600px) {
     body {
@@ -97,5 +188,9 @@ a.button:hover {
     a.button {
         padding: 2vw 4vw; /* Увеличиваем размер кнопок */
         font-size: 4vw; /* Увеличиваем размер шрифта на кнопках */
+    }
+
+    input[type="text"], input[type="password"], button {
+        font-size: 4vw; /* Увеличиваем шрифт для полей ввода и кнопок */
     }
 }
