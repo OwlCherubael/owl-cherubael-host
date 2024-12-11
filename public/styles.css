@@ -1,41 +1,76 @@
-/* Общие стили для body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Garamond', serif; /* Готический шрифт */
+    font-size: x-large;
+    background-color: #1a1a1a; /* Темный фон */
+    color: #ffcc00; /* Золотой цвет */
+    text-align: center; /* Центрируем текст */
     margin: 0;
     padding: 0;
 }
 
-/* Контейнер для центрирования контента */
 .container {
-    max-width: 600px;
-    margin: 100px auto;
+    max-width: 800px;
+    margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Стили для заголовка */
-.greeting {
-    color: #333;
+    background-color: #333; /* Темно-серая коробка */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     text-align: center;
+    border: 4px solid #ffcc00; /* Золотая рамка вокруг контейнера */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); /* Золотой ореол */
 }
 
-/* Стили для кнопок */
-.button {
+h1 {
+    color: #ffcc00; /* Золотистый текст, как у Империума */
+    text-shadow: 1px 1px 2px black;
+    font-family: 'Impact', sans-serif; /* Шрифт, похожий на готический */
+}
+
+ul {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding: 0;
+}
+
+li {
+    background: url('your-background-image.png') no-repeat; /* Здесь можно вставить текстуру */
+    background-size: cover; 
+    margin: 10px 0;
+    padding: 25px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    font-size: x-large; /* Размер шрифта на кнопках */
+    height: 30px; /* Укажите фиксированную высоту для элементов списка, при необходимости */
+    border: 2px solid #ffcc00; /* Золотая рамка вокруг контейнера */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7); /* Золотой ореол */
+    color: #f55d5d;
+
+}
+
+li::before {
+    content: url(Img/img2.png);
     display: inline-block;
-    margin: 10px;
+    position: absolute;
+    left: 20px; /* Расстояние слева */
+    top: 50%; /* Центрируем по вертикали */
+    transform: translateY(-50%); /* Сдвиг на половину высоты картинки */
+    font-size: 24px;
+    line-height: 0; /* Убираем лишний отступ вокруг изображения, если требуется */
+}
+
+a.button {
+    display: inline-block;
     padding: 10px 20px;
-    color: #fff;
-    background-color: #007bff;
+    background-color: #9e1414; /* Красный цвет, напоминающий имперский знак */
+    color: #f5d75d;
     text-decoration: none;
     border-radius: 5px;
-    text-align: center;
     transition: background-color 0.3s;
+    font-size: x-large; /* Размер шрифта на кнопках */
+    border: 2px solid #f5d75d; /* Черная рамка вокруг кнопок */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход цветов */
 }
 
-/* Эффект наведения для кнопок */
-.button:hover {
-    background-color: #0056b3;
+a.button:hover {
+    background-color: rgb(118, 1, 1); /* Темный красный при наведении */
 }
