@@ -1,61 +1,67 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a; /* Темный фон */
-    color: #e0e0e0; /* Светлый текст */
+    background-color: #1e1e1e; /* Темный фон */
+    color: #f0f0f0; /* Светлый текст */
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #333; /* Темно-серая коробка */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: #2c2c2c; /* Темный контейнер */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
     text-align: center;
 }
 
 h1 {
-    color: #ffcc00; /* Золотистый текст, как у Империума */
-    text-shadow: 1px 1px 2px black;
-    font-family: 'Impact', sans-serif; /* Шрифт, похожий на готический */
+    color: #ffcc00; /* Золотой цвет для заголовка */
+    font-size: 2.5em;
 }
 
-ul {
-    list-style-type: none; /* Убираем стандартные маркеры списка */
-    padding: 0;
-}
-
-li {
-    background: url('your-background-image.png') no-repeat; /* Здесь можно вставить текстуру */
-    background-size: cover; 
+.hero {
+    background-color: #333; /* Фон для каждого героя */
+    border: 1px solid #444; /* Темная граница */
+    border-radius: 5px;
     margin: 10px 0;
     padding: 15px;
-    border: 2px solid #ffcc00; /* Золотистая рамка */
-    border-radius: 5px;
-    position: relative;
-    overflow: hidden;
+    position: relative; /* Для позиционирования мечей */
+    font-size: 1.3em;
+    display: flex; /* Используем flexbox для выравнивания текстов и мечей */
+    align-items: center;
+    justify-content: center; /* Центрируем элементы по горизонтали */
 }
 
-li::before {
-    content: "⚔️"; /* Мечи или другой символ, связанный с Warhammer 40k */
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    font-size: 24px;
+.sword {
+    font-size: 1.5em; /* Размер мечей */
+    color: #ff0000; /* Красный цвет для мечей */
+    margin: 0 10px; /* Отступы между мечами и именем */
 }
 
 a.button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #b22222; /* Красный цвет, напоминающий имперский знак */
+    background-color: #007BFF;
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
 a.button:hover {
-    background-color: #900; /* Темный красный при наведении */
+    background-color: #0056b3;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
 }
