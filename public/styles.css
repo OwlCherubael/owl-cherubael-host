@@ -1,6 +1,6 @@
 body {
     font-family: 'Garamond', serif; /* Готический шрифт */
-    font-size: x-large;
+    font-size: 2.5vw; /* Использование относительной единицы */
     background-color: #1a1a1a; /* Темный фон */
     color: #ffcc00; /* Золотой цвет */
     text-align: center; /* Центрируем текст */
@@ -10,8 +10,8 @@ body {
 
 .container {
     max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
+    margin: 5vw auto; /* Использование относительных единиц */
+    padding: 2vw; /* Использование относительных единиц */
     background-color: #333; /* Темно-серая коробка */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -24,6 +24,7 @@ h1 {
     color: #ffcc00; /* Золотистый текст, как у Империума */
     text-shadow: 1px 1px 2px black;
     font-family: 'Impact', sans-serif; /* Шрифт, похожий на готический */
+    font-size: 3vw; /* Использование относительной единицы */
 }
 
 ul {
@@ -33,44 +34,68 @@ ul {
 
 li {
     background: url('your-background-image.png') no-repeat; /* Здесь можно вставить текстуру */
-    background-size: cover; 
-    margin: 10px 0;
-    padding: 25px;
+    background-size: cover;
+    margin: 2vw 0; /* Использование относительных единиц */
+    padding: 2vw; /* Использование относительных единиц */
     border-radius: 5px;
     position: relative;
     overflow: hidden;
-    font-size: x-large; /* Размер шрифта на кнопках */
-    height: 30px; /* Укажите фиксированную высоту для элементов списка, при необходимости */
+    font-size: 2vw; /* Размер шрифта на элементах списка */
+    height: auto; /* Динамическая высота */
     border: 2px solid #ffcc00; /* Золотая рамка вокруг контейнера */
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.7); /* Золотой ореол */
     color: #f55d5d;
-
 }
 
 li::before {
     content: url(Img/img2.png);
-    display: inline-block;
+    display: block;
     position: absolute;
-    left: 20px; /* Расстояние слева */
-    top: 50%; /* Центрируем по вертикали */
-    transform: translateY(-50%); /* Сдвиг на половину высоты картинки */
-    font-size: 24px;
-    line-height: 0; /* Убираем лишний отступ вокруг изображения, если требуется */
+    left: 20px;
+    top: 50%;
+    height: auto; /* Автоматическая высота */
+    width: auto;  /* Автоматическая ширина */
+    transform: translateY(-50%) scale(0.8); /* Увеличиваем изображение в 1.5 раза */
+    font-size: 3vw;
+    line-height: 0;
 }
 
 a.button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 1vw 2vw; /* Использование относительных единиц */
     background-color: #9e1414; /* Красный цвет, напоминающий имперский знак */
     color: #f5d75d;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s;
-    font-size: x-large; /* Размер шрифта на кнопках */
-    border: 2px solid #f5d75d; /* Черная рамка вокруг кнопок */
     transition: background-color 0.3s, color 0.3s; /* Плавный переход цветов */
+    font-size: 2vw; /* Размер шрифта на кнопках */
+    border: 2px solid #f5d75d; /* Черная рамка вокруг кнопок */
 }
 
 a.button:hover {
     background-color: rgb(118, 1, 1); /* Темный красный при наведении */
+}
+
+/* Медиа-запросы для адаптивной настройки */
+@media (max-width: 600px) {
+    body {
+        font-size: 4vw; /* Увеличиваем шрифт на маленьких экранах */
+    }
+
+    h1 {
+        font-size: 5vw; /* Увеличиваем заголовок */
+    }
+
+    .container {
+        padding: 5%; /* Увеличиваем отступы в контейнере */
+    }
+
+    li {
+        font-size: 4vw; /* Размер шрифта на элементах списка */
+    }
+
+    a.button {
+        padding: 2vw 4vw; /* Увеличиваем размер кнопок */
+        font-size: 4vw; /* Увеличиваем размер шрифта на кнопках */
+    }
 }
