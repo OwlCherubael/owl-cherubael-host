@@ -53,21 +53,23 @@ app.post('/greet', (req, res) => {
 
         res.send(`
         <!DOCTYPE html>
-        <html lang="ru">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Приветствие</title>
-            <link rel="stylesheet" href="styles.css">
-        </head>
-        <body>
-            <div class="container">
-                <h1>Привет, ${name}!</h1>
-                <a href="/" class="button">Вернуться на главную страницу</a>
-                <a href="/heroes" class="button">Герои</a>
-            </div>
-        </body>
-        </html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приветствие</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚔️ Привет, ${name}! ⚔️</h1>
+        <div class="buttons">
+            <a href="/" class="button">🔙 Вернуться на главную страницу</a>
+            <a href="/heroes" class="button">⚔️ Герои ⚔️</a>
+        </div>
+    </div>
+</body>
+</html>
         `);
     });
 });

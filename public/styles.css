@@ -1,67 +1,43 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1e1e1e; /* Темный фон */
-    color: #f0f0f0; /* Светлый текст */
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+    font-family: 'Garamond', serif; /* Готический шрифт */
+    text-align: center; /* Центрируем текст */
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 800px; /* Максимальная ширина контейнера */
+    margin: 100px auto; /* Центрирование по вертикали и горизонтали */
     padding: 20px;
-    background-color: #2c2c2c; /* Темный контейнер */
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.8);
-    text-align: center;
+    border: 2px solid #ffcc00; /* Золотая рамка */
+    background-color: #222; /* Темный фон для контейнера */
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5); /* Светящаяся тень */
 }
 
 h1 {
-    color: #ffcc00; /* Золотой цвет для заголовка */
-    font-size: 2.5em;
+    font-size: 2.5rem; /* Размер заголовка */
+    margin-bottom: 20px; /* Отступ снизу */
 }
 
-.hero {
-    background-color: #333; /* Фон для каждого героя */
-    border: 1px solid #444; /* Темная граница */
-    border-radius: 5px;
-    margin: 10px 0;
-    padding: 15px;
-    position: relative; /* Для позиционирования мечей */
-    font-size: 1.3em;
-    display: flex; /* Используем flexbox для выравнивания текстов и мечей */
-    align-items: center;
-    justify-content: center; /* Центрируем элементы по горизонтали */
+.buttons {
+    display: flex; /* Используем flexbox для кнопок */
+    justify-content: center; /* Центрируем кнопки */
+    gap: 20px; /* Отступ между кнопками */
 }
 
-.sword {
-    font-size: 1.5em; /* Размер мечей */
-    color: #ff0000; /* Красный цвет для мечей */
-    margin: 0 10px; /* Отступы между мечами и именем */
+.button {
+    text-decoration: none; /* Убираем подчеркивание */
+    padding: 15px 25px; /* Отступы на кнопках */
+    background-color: #ffcc00; /* Золотой цвет кнопок */
+    color: #000; /* Черный текст на кнопках */
+    font-size: 1.2rem; /* Размер шрифта на кнопках */
+    border: 2px solid #000; /* Черная рамка вокруг кнопок */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход цветов */
 }
 
-a.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-a.button:hover {
-    background-color: #0056b3;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #218838;
+.button:hover {
+    background-color: #000; /* Изменяем цвет кнопок при наведении */
+    color: #ffcc00; /* Золотой цвет текста при наведении */
 }
