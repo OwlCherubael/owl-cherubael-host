@@ -1,43 +1,41 @@
+/* Общие стили для body */
 body {
-    background-color: #000; /* Черный фон */
-    color: #fff; /* Белый текст */
-    font-family: 'Garamond', serif; /* Готический шрифт */
-    text-align: center; /* Центрируем текст */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
+/* Контейнер для центрирования контента */
 .container {
-    max-width: 800px; /* Максимальная ширина контейнера */
-    margin: 100px auto; /* Центрирование по вертикали и горизонтали */
+    max-width: 600px;
+    margin: 100px auto;
     padding: 20px;
-    border: 2px solid #ffcc00; /* Золотая рамка */
-    background-color: #222; /* Темный фон для контейнера */
-    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5); /* Светящаяся тень */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-size: 2.5rem; /* Размер заголовка */
-    margin-bottom: 20px; /* Отступ снизу */
+/* Стили для заголовка */
+.greeting {
+    color: #333;
+    text-align: center;
 }
 
-.buttons {
-    display: flex; /* Используем flexbox для кнопок */
-    justify-content: center; /* Центрируем кнопки */
-    gap: 20px; /* Отступ между кнопками */
-}
-
+/* Стили для кнопок */
 .button {
-    text-decoration: none; /* Убираем подчеркивание */
-    padding: 15px 25px; /* Отступы на кнопках */
-    background-color: #ffcc00; /* Золотой цвет кнопок */
-    color: #000; /* Черный текст на кнопках */
-    font-size: 1.2rem; /* Размер шрифта на кнопках */
-    border: 2px solid #000; /* Черная рамка вокруг кнопок */
-    transition: background-color 0.3s, color 0.3s; /* Плавный переход цветов */
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
 }
 
+/* Эффект наведения для кнопок */
 .button:hover {
-    background-color: #000; /* Изменяем цвет кнопок при наведении */
-    color: #ffcc00; /* Золотой цвет текста при наведении */
+    background-color: #0056b3;
 }

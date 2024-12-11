@@ -52,7 +52,7 @@ app.post('/greet', (req, res) => {
         }
 
         res.send(`
-        <!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -62,11 +62,9 @@ app.post('/greet', (req, res) => {
 </head>
 <body>
     <div class="container">
-        <h1>⚔️ Привет, ${name}! ⚔️</h1>
-        <div class="buttons">
-            <a href="/" class="button">🔙 Вернуться на главную страницу</a>
-            <a href="/heroes" class="button">⚔️ Герои ⚔️</a>
-        </div>
+        <h1 class="greeting">Привет, <span id="name">${name}</span>!</h1>
+        <a href="/" class="button">Вернуться на главную страницу</a>
+        <a href="/heroes" class="button">Герои</a>
     </div>
 </body>
 </html>
