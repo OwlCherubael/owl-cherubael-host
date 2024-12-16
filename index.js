@@ -1,6 +1,4 @@
 require('dotenv').config(); // Подключаем dotenv для работы с переменными окружения
-console.log('Строка подключения:', process.env.JAWSDB_URL);
-console.log('Строка подключения:', process.env.CORRECT_PASSWORD);
 
 const express = require('express');
 const bodyParser = require('body-parser');
